@@ -29,7 +29,7 @@ Built by **Tanmay, Anshit & Rupesh**.
     Download full report (PDF)
   </a>
 
-- **Live Demo:**  
+- **Hosted version:**  
   <a href="https://gvcodingschemeextractor.pythonanywhere.com" target="_blank" rel="noopener noreferrer">
     GV Coding Scheme Extractor
   </a>
