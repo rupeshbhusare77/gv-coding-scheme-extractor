@@ -1,0 +1,139 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icons.png') }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Scheme Extractor</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Link to CSS using Flask's static folder -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+  <!-- Background with subtle sigma symbols -->
+  <div class="background-shapes"></div>
+
+  <!-- Header / Title Section -->
+  <header class="header">
+    <h1>Coding Scheme Extractor</h1>
+  </header>
+
+  <div class="toggle-container">
+    <!-- Radio inputs to store the state of the toggle -->
+    <input type="radio" name="option" id="option-generator" checked>
+    <input type="radio" name="option" id="option-research">
+
+    <!-- Labels that appear as the clickable parts of the toggle -->
+    <div class="toggle-wrapper">
+      <label for="option-generator" class="toggle-label">
+        <!-- Placeholder icon for "Generator" -->
+        <span class="icon">
+          <!-- Example using an SVG, or you could use FontAwesome, etc. -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+          </svg>
+
+        </span>
+        Generator
+      </label>
+
+      <label for="option-research" class="toggle-label">
+        <!-- Placeholder icon for "Research" -->
+        <span class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          </svg>
+
+        </span>
+        Report
+      </label>
+
+      <!-- Slider or highlight element to show the selected segment -->
+      <div class="toggle-slider"></div>
+    </div>
+  </div>
+
+  <!-- Main container holding both cards -->
+  <main class="main-container">
+    <!-- Left Card: Generator Parameters -->
+    <section class="card parameters-card">
+      <h2 class="card-title" style="display: flex; align-items: center; gap: 8px;">
+        <img src="{{ url_for('static', filename='images/symbol.png') }}" alt="Symbol" class="icon" width="28px"
+          height="28px" />
+        <span>Generator Parameters</span>
+      </h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nValue">N(Length)</label>
+          <input type="number" id="nValue" min="1" value="12" />
+        </div>
+        <div class="form-group">
+          <label for="kValue">K(Dimension)</label>
+          <input type="number" id="kValue" min="1" value="6" />
+        </div>
+        <div class="form-group">
+          <label for="dValue">D(Distance)</label>
+          <input type="number" id="dValue" value="3" />
+        </div>
+        <div class="form-group">
+          <label for="qValue">Q(Field size)</label>
+          <input type="number" id="qValue" value="2" />
+        </div>
+      </div>
+      <div>
+        <label for="generateLinearCode">
+          <input type="checkbox" id="generateLinearCode" checked />
+          Generate Linear Code
+        </label>
+      </div>
+      <div style="display: flex; justify-content: center; margin-top: 16px;">
+        <button id="generateBtn" class="generate-btn" style="display: flex; gap: 8px;">
+          <img src="{{ url_for('static', filename='images/symbol4.png') }}" width="20px" height="20px" />Generate Matrix
+        </button>
+        <button id="generateCodeBtn" class="generate-btn" style="display: flex; gap: 8px; margin-left: 16px;">
+          <img src="{{ url_for('static', filename='images/symbol4.png') }}" width="20px" height="20px" />Download
+          Codebook
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Right Card: Matrix Visualization -->
+    <section class="card1 visualization-card">
+      <h2 class="card-title" style="display: flex; align-items: center; gap: 8px;">
+        <img src="{{ url_for('static', filename='images/symbol2.png') }}" alt="Symbol" class="icon" width="28px"
+          height="28px" />
+        <span>Generator Matrix</span>
+      </h2>
+      <div id="matrixContainer" class="matrix-container">
+        <!-- The generator matrix grid will be injected here -->
+      </div>
+      <div class="stats-grid">
+        <div class="stat-box">
+          <span class="stat-label">Dimensions</span>
+          <span class="stat-value" id="matrixSize">-</span>
+        </div>
+        <div class="stat-box">
+          <button id="downloadBtn" class="generate-btn" disabled>CSV Download</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Link to JS using Flask's static folder -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
