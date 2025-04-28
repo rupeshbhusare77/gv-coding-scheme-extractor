@@ -23,13 +23,16 @@ Built by **Tanmay, Anshit & Rupesh**.
 ---
 
 ## 🔗 Links
-• Detailed Report: <a href="https://drive.google.com/file/d/1TryO1o4dM53dLRD3mnTjXH7J70Ja5lIt/view" target="_blank" rel="noopener noreferrer">
-  Report
-</a>
 
-• Hosted version: <a href="gvcodingschemeextractor.pythonanywhere.com" target="_blank" rel="noopener noreferrer">
-  GV-coding-scheme-extractor
-</a>
+- **Detailed Report:**  
+  <a href="https://drive.google.com/file/d/1TryO1o4dM53dLRD3mnTjXH7J70Ja5lIt/view" target="_blank" rel="noopener noreferrer">
+    Download full report (PDF)
+  </a>
+
+- **Live Demo:**  
+  <a href="https://gvcodingschemeextractor.pythonanywhere.com" target="_blank" rel="noopener noreferrer">
+    GV Coding Scheme Extractor
+  </a>
 
 
 ---
@@ -49,8 +52,10 @@ Built by **Tanmay, Anshit & Rupesh**.
    ```bash
    python app.py
    ```  
-4. **Browse**  
-   Visit <http://localhost:5000>
+4. **Browse** 
+   ```Visit
+   http://localhost:5000
+   ```
 
 ---
 
