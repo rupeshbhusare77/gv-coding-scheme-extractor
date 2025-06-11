@@ -10,7 +10,6 @@ Generates linear and general codes over finite fields by
 - Constructing parity-check and generator matrices  
 - Employing randomized, greedy, and hybrid strategies  
 
-Built by **Tanmay, Anshit & Rupesh**.
 
 ---
 
