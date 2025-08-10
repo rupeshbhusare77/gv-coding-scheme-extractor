@@ -40,8 +40,8 @@ Generates linear and general codes over finite fields by
 
 1. **Clone**  
    ```bash
-   git clone https://github.com/your-username/your-repo.git
-   cd your-repo
+   git clone https://github.com/rupeshbhusare77/gv-coding-scheme-extractor.git
+   cd gv-coding-scheme-extractor
    ```
 2. **Install**  
    ```bash
